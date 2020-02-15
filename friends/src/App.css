@@ -32,3 +32,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Navbar Styles */
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
