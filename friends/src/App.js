@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Homepage from './components/Homepage';
+import Login from './components/Login';
 import './App.css';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Homepage}/>
           <Route path='/protected' />
-          <Route path='/login' />
+          <Route path='/login' component={Login}/>
         </Switch>
       </div>
     </Router>
