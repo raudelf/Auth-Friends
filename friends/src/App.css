@@ -43,7 +43,62 @@ a {
   color: red;
 }
 
-/* Friends Styles */
+/* Form Styles */
+
+.hidden {
+  display: none;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.btn {
+  border: none;
+}
+
+.addFriend {
+  width: 12%;
+  padding: 10px 0;
+  margin-bottom: 2%;
+  font-size: 14px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.addFriend:hover {
+  background-color: rgba(0, 128, 0, 0.438);
+}
+
+.friendForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  padding: 10px;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+.submit {
+  width: 12%;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: rgba(0, 0, 255, 0.438);
+}
+
+/* Friend Styles */
 
 .friendsContainer {
   display: flex;
