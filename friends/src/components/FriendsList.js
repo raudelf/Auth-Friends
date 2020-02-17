@@ -19,17 +19,20 @@ const FriendsList = props => {
 
 
     return (
-        <div className='friendsContainer'>
-            {friendsList.map((friend, index) => {
-                return (
-                    <div key={index} className='friendBox'>
-                        <h3>{friend.name}</h3>
-                        <p>Age: {friend.age}</p>
-                        <p>Email: <a href={`mailto:${friend.email}`}>{friend.email}</a></p>
-                    </div>
-                )
-            })}
-        </div>
+        <>
+            <h2>Friends List</h2>
+            <div className='friendsContainer'>
+                {friendsList.map((friend, index) => {
+                    return (
+                        <div key={index} className='friendBox'>
+                            <h3>{friend.name}</h3>
+                            <p>Age: {friend.age}</p>
+                            <p>Email: <a href={`mailto:${friend.email}`}>{friend.email}</a></p>
+                        </div>
+                    )
+                })}
+            </div>
+        </>
     )
 }
 
