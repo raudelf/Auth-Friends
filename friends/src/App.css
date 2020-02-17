@@ -71,12 +71,6 @@ a {
   background-color: rgba(0, 128, 0, 0.438);
 }
 
-.friendForm {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
 input {
   padding: 10px;
 }
