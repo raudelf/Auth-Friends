@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import Loader from 'react-loader-spinner';
+
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({
@@ -7,28 +9,43 @@ const Login = (props) => {
         password: ''
     })
 
+    const [loading, setLoading] = useState();
+
+    const [errorMssg, setErrorMssg] = useState({
+        message: '',
+        error: false
+    });
+
     const handleChange = e => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
 
     const handleLogin = e => {
         e.preventDefault();
-        axiosWithAuth()
+        setErrorMssg({...errorMssg, message: '', error: false});
+        setLoading(true);
+        setTimeout(() => {
+            axiosWithAuth()
         .post('/login', credentials)
         .then(res => {
             localStorage.setItem('token', res.data.payload);
             props.history.push('/protected');
-            console.log('Data: ', res)
+            setLoading(false);
+            console.log('Data: ', res);
         })
         .catch(err => {
             console.log('Invalid Login: ', err);
+            setLoading(false);
+            setErrorMssg({ ...errorMssg, message: 'Invalid Login', error: true });
         });
+        }, 2000)
     }
 
     return (
         <div>
-            <h2>Log In</h2>
+        {loading ? (<div><Loader type='Circles' color='#ffffff' /></div>) : (
             <form className='formContainer' onSubmit={handleLogin}>
+            <h2>Log In</h2>
                 <input 
                 type='text'
                 name='username'
@@ -45,6 +62,8 @@ const Login = (props) => {
                 />
                 <button>Log In</button>
             </form>
+        )}
+        {errorMssg ? (<h3 className='errorMssg'>{errorMssg.message}</h3>) : (<div></div>)} 
         </div>
     )
 }
