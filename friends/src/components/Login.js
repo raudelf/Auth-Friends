@@ -44,7 +44,7 @@ const Login = (props) => {
 
     return (
         <div>
-        {loading ? (<div><Loader type='Circles' color='#ffffff' /></div>) : (
+        {loading ? (<div><h3>Logging In</h3><Loader type='Circles' color='green' /></div>) : (
             <form className='formContainer' onSubmit={handleLogin}>
             <h2>Log In</h2>
                 <input 
@@ -61,7 +61,7 @@ const Login = (props) => {
                 value={credentials.password}
                 onChange={handleChange}
                 />
-                <button>Log In</button>
+                <button className='login btn'>Log In</button>
             </form>
         )}
         {errorMssg ? (<h3 className='errorMssg'>{errorMssg.message}</h3>) : (<div></div>)} 

@@ -26,10 +26,21 @@
 
 
 /* Navbar Styles */
+.navBar {
+  display: flex;
+}
 
 li {
+  width: 100px;
+  margin-right: 2%;
+  padding: 1% 0;
   text-decoration: none;
   list-style: none;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: blue;
 }
 
 a {
@@ -43,6 +54,18 @@ a {
   color: red;
 }
 
+.login {
+  width: 12%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.login:hover {
+  background-color: rgba(0, 0, 255, 0.438);
+}
 /* Form Styles */
 
 .hidden {
