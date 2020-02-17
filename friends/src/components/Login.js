@@ -36,6 +36,7 @@ const Login = (props) => {
         .catch(err => {
             console.log('Invalid Login: ', err);
             setLoading(false);
+            localStorage.removeItem('token');
             setErrorMssg({ ...errorMssg, message: 'Invalid Login', error: true });
         });
         }, 2000)
