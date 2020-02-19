@@ -1,0 +1,135 @@
+.App {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Navbar Styles */
+.navBar {
+  display: flex;
+}
+
+li {
+  width: 100px;
+  margin-right: 2%;
+  padding: 1% 0;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: blue;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Login Styles */
+
+.errorMssg {
+  color: red;
+}
+
+.login {
+  width: 12%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.login:hover {
+  background-color: rgba(0, 0, 255, 0.438);
+}
+/* Form Styles */
+
+.hidden {
+  display: none;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.btn {
+  border: none;
+}
+
+.addFriend {
+  width: 12%;
+  padding: 10px 0;
+  margin-bottom: 2%;
+  font-size: 14px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.addFriend:hover {
+  background-color: rgba(0, 128, 0, 0.438);
+}
+
+input {
+  padding: 10px;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+.submit {
+  width: 12%;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: rgba(0, 0, 255, 0.438);
+}
+
+/* Friend Styles */
+
+.friendsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.friendBox {
+  width: 250px;
+  margin: 2% 0;
+  background-color: white;
+  color: black;
+}
+
+.friendBox a{
+  color: blue;
+}
